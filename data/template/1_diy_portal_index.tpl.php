@@ -1,0 +1,5 @@
+<?php if(!defined('IN_DISCUZ')) exit('Access Denied'); hookscriptoutput('index');
+block_get('3,4,5');?><?php include template('common/header'); ?><style id="diy_style" type="text/css"></style>
+<div class="wp">
+<!--[diy=diy1]--><div id="diy1" class="area"><div id="frameXZX7In" class="frame move-span cl frame-1"><div class="title frame-title"><span class="titletext">1框架</span></div><div id="frameXZX7In_left" class="column frame-1-c"><div id="frameXZX7In_left_temp" class="move-span temp"></div><?php block_display('3');?></div></div><div id="frame4W43s4" class="frame move-span cl frame-1-1"><div class="title frame-title"><span class="titletext">1-1框架</span></div><div id="frame4W43s4_left" class="column frame-1-1-l"><div id="frame4W43s4_left_temp" class="move-span temp"></div><?php block_display('4');?></div><div id="frame4W43s4_center" class="column frame-1-1-r"><div id="frame4W43s4_center_temp" class="move-span temp"></div><?php block_display('5');?></div></div></div><!--[/diy]-->
+</div><?php include template('common/footer'); ?>
