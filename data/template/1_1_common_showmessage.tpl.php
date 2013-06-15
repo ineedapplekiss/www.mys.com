@@ -53,7 +53,7 @@ document.write('<p class="alert_btnleft"><a href="./">[ <?php echo $_G['setting'
 <?php } ?>
 <button type="button" class="pn" onclick="hideWindow('<?php echo $_GET['handlekey'];?>');"><em>取消</em></button>
 <?php } elseif(!$param['closetime'] && !$param['locationtime']) { ?>
-<button type="button" class="pn pnc" id="closebtn" onclick="hideWindow('<?php echo $_GET['handlekey'];?>');"><strong>ȷ��?</strong></button>
+<button type="button" class="pn pnc" id="closebtn" onclick="hideWindow('<?php echo $_GET['handlekey'];?>');"><strong>确定</strong></button>
 <script type="text/javascript" reload="1">if($('closebtn')) {$('closebtn').focus();}</script>
 <?php } ?>
 </p>

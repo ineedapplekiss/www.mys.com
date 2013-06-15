@@ -1,5 +1,5 @@
-<?php 
-define('UC_DBHOST', 'localhost');
+<?php
+define('UC_DBHOST', '117.121.25.221');
 define('UC_DBUSER', 'szl');
 define('UC_DBPW', 'szl');
 define('UC_DBNAME', 'www_mys_com');
