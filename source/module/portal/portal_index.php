@@ -28,6 +28,9 @@ if(!$metadescription) {
 if(isset($_G['makehtml'])){
 	helper_makehtml::portal_index();
 }
-
+block_get('136,137');
+echo '1111'.block_display('137');
+output();
+exit;
 include_once template('diy:portal/index');
 ?>

@@ -1,0 +1,9 @@
+#gitignore list
+
+data/attachment/
+data/log/
+data/template/
+data/backup/
+data/cache/
+data/download/
+data/threadcache/

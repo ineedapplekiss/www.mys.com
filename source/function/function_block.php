@@ -132,7 +132,6 @@ function block_fetch_content($bid, $isjscall=false, $forceupdate=false) {
 	if(!$block) {
 		return;
 	}
-
 	if($forceupdate) {
 		block_updatecache($bid, true);
 		$block = $_G['block'][$bid];
@@ -191,6 +190,7 @@ function block_fetch_content($bid, $isjscall=false, $forceupdate=false) {
 		}
 		$str = $div.$str."</div>";
 	}
+
 	if($block['blockclass'] == 'html_html' && $block['script'] == 'search') $str = strtr($str, array('{FORMHASH}'=>FORMHASH));
 	return !empty($block['hidedisplay']) ? '' : $str;
 }
