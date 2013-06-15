@@ -10,7 +10,7 @@
 define('APPTYPEID', 4);
 define('CURSCRIPT', 'cms');
 
-require './source/class/class_core.php';
+require './source/class/class_core.php';//
 $discuz = C::app();
 
 $cachelist = array('userapp', 'portalcategory', 'diytemplatenameportal');
