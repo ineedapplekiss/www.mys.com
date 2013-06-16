@@ -39,7 +39,7 @@ $_config['download']['xsendfile']['type'] = '0';
 $_config['download']['xsendfile']['dir'] = '/down/';
 
 // ---------------------------  CONFIG CACHE  --------------------------- //
-$_config['cache']['type'] = 'file';
+$_config['cache']['type'] = 'sql';
 
 // --------------------------  CONFIG OUTPUT  --------------------------- //
 $_config['output']['charset'] = 'utf-8';
