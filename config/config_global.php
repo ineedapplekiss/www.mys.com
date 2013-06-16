@@ -23,7 +23,7 @@ $_config['memory']['redis']['timeout'] = '0';
 $_config['memory']['redis']['serializer'] = 1;
 $_config['memory']['memcache']['server'] = '';
 $_config['memory']['memcache']['port'] = 11211;
-$_config['memory']['memcache']['pconnect'] = 1;
+$_config['memory']['memcache']['pconnect'] = 0;
 $_config['memory']['memcache']['timeout'] = 1;
 $_config['memory']['apc'] = 1;
 $_config['memory']['xcache'] = 1;
@@ -39,7 +39,7 @@ $_config['download']['xsendfile']['type'] = '0';
 $_config['download']['xsendfile']['dir'] = '/down/';
 
 // ---------------------------  CONFIG CACHE  --------------------------- //
-$_config['cache']['type'] = 'sql';
+$_config['cache']['type'] = 'file';
 
 // --------------------------  CONFIG OUTPUT  --------------------------- //
 $_config['output']['charset'] = 'utf-8';

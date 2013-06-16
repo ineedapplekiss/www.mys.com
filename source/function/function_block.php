@@ -37,7 +37,6 @@ function block_get_batch($parameter) {
 	$bids = array_map('intval', $bids);
 	$bids = array_unique($bids);
 	$styleids = array();
-
 	if($bids) {
 		if(C::t('common_block')->allowmem) {
 			if(($cachedata = memory('get', $bids, 'blockcache_')) !== false) {

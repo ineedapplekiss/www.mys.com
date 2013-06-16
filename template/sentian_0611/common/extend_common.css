@@ -1,0 +1,105 @@
+/* ----------------------------------
+
+Main CSS file for Discuz! X
+(C) É­ÌïÍøÂç.
+http://www.sentiannet.com
+Created & Modified by É­ÌïÍøÂç¡å.
+
+---------------------------------- */
+
+	#toptb { background: #181818; border-bottom: 2px solid #000; border-top: 2px solid #000; height: 40px; line-height: 40px; }
+		#toptb a { float: left; padding: 0 4px; height: 40px; color: #666; }
+		#toptb a.showmenu { padding-right: 15px; }
+		#toptb a.hover { background-color: #FFF; }
+		#toptb .pipe { float: left; display: none; }
+		
+#hd { height: 240px; }
+#hd h2 { padding: 30px 0 0 0; }
+#sentian_ad { float: right; margin-top: 30px; }
+
+			#nv { padding-left: 0; height: 56px; }
+				#nv li { padding-right: 0; height: 56px; line-height: 56px; background: none; }
+					.ie_all #nv li { line-height: 59px; }
+					.ie6 #nv li { line-height: 56px; }
+					#nv li a { height: 56px; }
+						#nv li a { text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.8); }
+					#nv li.a { margin-left: 0; }
+						#nv li a:hover { background: none; color: {MENUHOVERTEXT}; text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.8); text-decoration: none; }
+						#nv li.hover a:hover, #nv li.hover a { background: none; color: {MENUHOVERTEXT}; text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.8); text-decoration: none; }
+						#qmenu { margin: 15px 0 0; background: url({STYLEIMGDIR}/sentian_qmenu.png) no-repeat 0 0; }
+
+#sentian_nvl { background: url({STYLEIMGDIR}/sentian_nv.png) no-repeat 0 0; padding-left: 8px; }
+#sentian_nvr { background: url({STYLEIMGDIR}/sentian_nv.png) no-repeat 100% -61px; padding-right: 8px; }
+#shadow_l { background: url({STYLEIMGDIR}/sentian_shadow.png) 0 0 no-repeat; height: 16px; width: 400px; float: left; margin: 0; }
+#shadow_r { background: url({STYLEIMGDIR}/sentian_shadow.png) 0 -21px no-repeat; height: 16px; width: 400px; float: right; margin: 0; }
+
+
+#sentian_userbar { background: #fff url({STYLEIMGDIR}/sentian_userbar.jpg ) repeat-x; height: 65px; }
+#um, #um a { text-shadow: 0 1px 4px #000; }
+#um .new, .topnav .new, .sch .new, #toptb .new { color: #fff; }
+.sentian_um a { padding: 0 4px 0 8px; background: url({STYLEIMGDIR}/sentian_uma.png) no-repeat 0 60%; }
+.sentian_um .pipe { display: none; }
+#um { float: left; line-height: 65px; padding: 0 44px 0 0; }
+#um .avt { margin: 13px -44px 0 0; }
+#sentian_userbar .avt img { width: 32px; height: 32px; background: #fff; border: 1px solid #000; }
+#extcreditmenu { margin-right: 0; }
+#extcreditmenu.a, #g_upmine.a { color: #000; background: {WRAPBG}; }
+#diy-tg { margin-top: 8px; }
+#diy-tg_menu { margin: -22px 0 0 -10px; }
+#diy-tg_menu li { line-height: 25px; }
+
+.fastlg_fm { border-right: 0; margin: 20px 10px 0 8px; padding-right:0 !important; }
+.fastlg_fm .hm { display: none; }
+
+#memb_login { float: left; line-height: 65px; color: #dfdfdf; text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.6); }
+#memb_login a { color: #fff; }
+
+
+#search { position: relative; top: 10px; background: url({STYLEIMGDIR}/sentian_search.png) 0 0 no-repeat; height: 67px; width: 284px; float: right; }
+#sentian_userbar #sc { display: block; margin: 20px 0 0 22px;_margin: 20px 0 0 12px; }
+				#sc_txt { border: none; width: 184px; height: 16px; padding: 7px 8px; margin-right: 0; color: #434343; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3); font-size: 12px; background: url({STYLEIMGDIR}/sentian_search.png) no-repeat 0 -72px; }
+				.sc_button { margin-left: 10px; border: none; width: 29px; height: 29px; cursor: pointer; background: url({STYLEIMGDIR}/sentian_search.png) no-repeat 0 -107px; }
+				.sc_button:hover { background-position: 0 -141px;}
+				#sc_type_td { display: none; }
+				#sc_button { width: 39px; }
+
+#sentian_wp { background: url({STYLEIMGDIR}/sentian_wpbg.png) repeat-x 0 0; padding: 12px 0; }
+
+.fl { border-width: 0 0 1px 0; }
+.fl .bm_h { height: 40px; line-height: 40px; border-width:0; padding: 0 0 0 9px; }
+.fl .bm_h a { color: #fff; text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.8); }
+.sentian_bm_h { background: url({STYLEIMGDIR}/sentian_titlebg.png) no-repeat 100% -166px; padding-right: 9px; }
+
+#online .bm_h { border-width:0; padding: 0 0 0 9px; background: url({STYLEIMGDIR}/sentian_titlebg.png) no-repeat 0 -120px; height: 40px; overflow: hidden; }
+.sentian_olbmh { overflow: hidden; height: 40px; line-height: 40px; font-size: 1.1em; color: #444; padding-right:9px; background: url({STYLEIMGDIR}/sentian_titlebg.png) no-repeat 100% -120px; text-shadow: 0 1px 0 #fff; }
+#online .bm_h .o { margin-top: 2px; }
+#onlinelist .bbda, .lk .bbda { border-bottom: 1px dotted {COMMONBORDER}; }
+
+.lk .bm_h { border-width:0; padding-right: 0; background: url({STYLEIMGDIR}/sentian_titlebg.png) no-repeat 0 -120px; padding-left: 9px; height: 40px; overflow: hidden; }
+
+#sentian_ft { background: #0b0b0b; border-top: 5px solid #000; border-bottom: 5px solid #000; padding: 25px 0; text-shadow: 0 -1px 1px #000; }
+#ft { border-top: 0; padding: 0; }
+#ft a { color: #cdcdcd; }
+
+	.pnc, a.pnc { border-color: #98472e; background: #ab5034 url({STYLEIMGDIR}/sentian_titlebg.png) repeat-x 0 -218px; color: #FFF !important; }
+		.pnc:active { background-position: 0 -264px; }
+
+.pgs #newspecial, .pgs #newspecialtmp { float: left; background: url({STYLEIMGDIR}/pn_post.png) no-repeat 0 0; }
+#post_reply, #post_replytmp { float: left; background: url({STYLEIMGDIR}/pn_reply.png) no-repeat 0 0; }
+	#newspecial img, #newspecialtmp img, #post_reply img, #post_replytmp img { opacity: 0; filter: alpha(opacity=0); }
+.moodfm_btn { background-image: url({STYLEIMGDIR}/mood_input_btn.png) !important; }
+#create_group_btn { display: block; background: url({STYLEIMGDIR}/create_group.png) no-repeat 0 0; }
+	#create_group_btn img { opacity: 0; filter: alpha(opacity=0); }
+.el .ec .hot, .clct_list .xld .m { background-image: url({STYLEIMGDIR}/hotspot.gif); }
+.pll .s { background-image:url({STYLEIMGDIR}/polljoins.gif); }
+
+/* Frame stylies by lushnis */
+.xfs { border-top: none; }
+	.xfs .frame-title, .xfs .frametitle, .xfs .tab-title { border: none; background: transparent url({IMGDIR}/mu.png) repeat-x 0 0; }
+	.xfs .frame-title, .xfs .frametitle, .xfs .tab-title, .xfs .frame-title a, .xfs .frametitle a, .xfs .tab-title a { color: #FFF !important; }
+	.xfs .tb li a { height: 32px; border: none !important; }
+	.xfs .tb .a a { background: transparent url({IMGDIR}/mu.png) no-repeat 50% -165px; }
+.xfs_1 { border-color: #2267B5; }
+	.xfs_1 .frame-title, .xfs_1 .frametitle, .xfs_1 .tab-title  { background-color: #2267B5; background-position: 0 0; }
+		.xfs_1 .tb .a a { background-position: 50% -66px; }
+
