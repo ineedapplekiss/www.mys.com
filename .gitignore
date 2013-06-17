@@ -8,3 +8,7 @@ data/cache/
 data/download/
 data/threadcache/
 data/diy/
+data/sysdata/
+.buildpath
+.project
+.settings/
