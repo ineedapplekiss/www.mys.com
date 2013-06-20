@@ -428,7 +428,6 @@ if($gid && !empty($catlist)) {
 	}
 	$_G['fid'] = $gid;
 }
-
 include template('diy:forum/discuz:'.$gid);
 
 function get_index_announcements() {

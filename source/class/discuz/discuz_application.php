@@ -662,7 +662,6 @@ class discuz_application extends discuz_base{
 		}
 
 		$styleid = intval($styleid);
-
 		if($styleid && $styleid != $this->var['setting']['styleid']) {
 			loadcache('style_'.$styleid);
 			if($this->var['cache']['style_'.$styleid]) {

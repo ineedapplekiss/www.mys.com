@@ -512,7 +512,6 @@ function checktplrefresh($maintpl, $subtpl, $timecompare, $templateid, $cachefil
 
 function template($file, $templateid = 0, $tpldir = '', $gettplfile = 0, $primaltpl='') {
 	global $_G;
-
 	static $_init_style = false;
 	if($_init_style === false) {
 		C::app()->_init_style();

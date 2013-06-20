@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>萌元素游戏网</title>
+    <link href="<!--{$_G['style']['styleimgdir']}-->/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="<!--{$_G['style']['styleimgdir']}-->/css/header.css" rel="stylesheet" type="text/css" />
+    <script src="<!--{$_G['style']['styleimgdir']}-->/js/jquery14.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var t = n = 0, count;
+        $(document).ready(function () {
+            count = $("#banner_list a").length;
+            $("#banner_list a:not(:first-child)").hide();
+            $("#banner_info").html($("#banner_list a:first-child").find("img").attr('alt'));
+            $("#banner_info").click(function () { window.open($("#banner_list a:first-child").attr('href'), "_blank") });
+            $("#banner li").click(function () {
+                clearInterval(t);
+                var i = $(this).text() - 1; //获取Li元素内的值，即1，2，3，4
+                n = i;
+                if (i >= count) return;
+                $("#banner_info").html($("#banner_list a").eq(i).find("img").attr('alt'));
+                $("#banner_info").unbind().click(function () { window.open($("#banner_list a").eq(i).attr('href'), "_blank") })
+                $("#banner_list a").filter(":visible").fadeOut(500).parent().children().eq(i).fadeIn(1000);
+                $(this).css({ "background": "#26910E", 'color': '#fff' }).siblings().css({ "background": "#000", 'color': '#fff' });
+
+                t = setInterval("showAuto()", 4000);
+            });
+
+
+            t = setInterval("showAuto()", 4000);
+
+
+            //图片移过
+            var h, w;
+            $(".tpImg").hover(function () {
+                h = $(this).height();
+                w = $(this).width();
+                //判断IE6
+                if (($.browser.msie) && ($.browser.version == "6.0")) {
+                    return;
+                }
+                // hover in
+                $(this).attr("style", "z-index:2;");
+                $(this).removeClass("tp");
+                $(this).addClass("imgShadow");
+                //animateB($(this));
+            }, function () {
+                //判断IE6
+                if (($.browser.msie) && ($.browser.version == "6.0")) {
+                    return;
+                }
+                // hover out
+                $(this).attr("style", "z-index:0;");
+                $(this).removeClass("imgShadow");
+                $(this).addClass("tp");
+                //reversAnimationB($(this));
+            });
+
+
+            function animateB(obj) {
+                obj.stop().animate({
+                    height: obj.height() + 20,
+                    width: obj.width() + 20,
+                    left: "-=25",
+                    top: "-=25"
+                }, "3000");
+            }
+
+            //搜索框
+            $(".txtInput").click(function () {
+                $(this).select();
+            });
+            $(".txtInput").blur(function () {
+                if ($(this).val() == "") {
+                    $(this).val("关键词搜索...");
+                }
+            });
+
+        });
+        function showAuto() {
+            n = n >= (count - 1) ? 0 : ++n;
+            $("#banner li").eq(n).trigger('click');
+        }
+
+    </script>
+</head>
+<body>
+    <div id="content">
+        <div id="header">
+            <div class="wrapper header">
+                <div class="logo">
+                    <a href="#" title="萌元素游戏网">
+                        <img src="<!--{$_G['style']['styleimgdir']}-->/images/logo.png" alt="萌元素游戏网" width="375" height="85"></a></div>
+                <div class="city">
+                </div>
+                <div class="right clearfix">
+                    <!--<div class="weibo clearfix">
+                        <div class="lbg">
+                        </div>
+                        <div class="tool">
+                            <div class="rbg">
+                            </div>
+                            <ul class="clearfix">
+                                <li class="favSite"><a href="javascript:window.external.AddFavorite('http://www.baidu.com/','萌元素游戏网')"
+                                    rel="nofollow">收藏本站</a></li>
+                                <li><a href="#" style="color: #F74D04;">关于我们</a></li>
+                            </ul>
+                        </div>
+                    </div>-->
+                    <div class="search">
+                        <form id="searchform" method="get" action="index.html">
+                        <input type="hidden" name="cid" value="428">
+                        <ul class="clearfix">
+                            <li>
+                                <input type="text" autocomplete="off" class="txtInput" name="key" id="lskey" value="关键词搜索...">
+                            </li>
+                            <li title="搜索">
+                                <input type="submit" value="搜索" class="btnSearch" />
+                            </li>
+                        </ul>
+                        </form>
+                    </div>
+                    <div class="hotkey">
+                        <img src="<!--{$_G['style']['styleimgdir']}-->/images/hotkey.gif" alt="热门旅游" width="13" height="12">&nbsp;热门搜索：&nbsp;<a
+                            href="#">搜索词</a>&nbsp;<a href="#">搜索词</a></div>
+                </div>
+                <div id="goToTop" style="display: none;">
+                </div>
+            </div>
+            <div class="hd2">
+                <div class="hz">
+                    <span>欢迎您，<a href="#">lengyue111</a> | <a href="#">退出</a>，萌元素积分：0.00（<a href="#">领取</a>）</span>
+                    <span class="hzSpan">[&nbsp;<a href="portal.php">萌元素首页</a>&nbsp;-&nbsp;<a href="forum.php">萌元素手游论坛</a>&nbsp;-&nbsp;<a
+                        href="plugin.php?id=auction">积分商城</a>&nbsp;]</span></div>
+            </div>
+        </div>
