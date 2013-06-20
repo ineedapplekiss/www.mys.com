@@ -22,7 +22,7 @@ require DISCUZ_ROOT.'./source/function/function_portal.php';
 
 if(empty($_GET['mod']) || !in_array($_GET['mod'], array('list', 'view', 'comment', 'portalcp', 'topic', 'attachment', 'rss', 'block'))) $_GET['mod'] = 'index';
 
-
+//
 define('CURMODULE', $_GET['mod']);
 runhooks();
 $mc = C::memory();
