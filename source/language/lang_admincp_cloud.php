@@ -4,7 +4,7 @@
  *	  [Discuz!] (C)2001-2099 Comsenz Inc.
  *	  This is NOT a freeware, use is subject to license terms
  *
- *	  $Id: lang_admincp_cloud.php 32804 2013-03-13 06:18:00Z liulanbo $
+ *	  $Id: lang_admincp_cloud.php 33387 2013-06-05 03:21:26Z jeffjzhang $
  */
 
 if(!defined('IN_DISCUZ')) {
@@ -366,14 +366,26 @@ $extend_lang = array
 	'security_cron_daily' => '防水墙每日优化',
 	'setting_update_succeed' => '当前设置更新成功',
 	'security_createtime' => '违规日期',
+	'security_safe_list' => '安全设置',
+	'security_safe_login_open' => '开启安全登陆功能',
+	'security_safe_login_open_comment' => '有效防止恶意注册！选择是，用户必须将论坛帐号与QQ帐号绑定后，才能在论坛发帖，回复',
+	'security_qq_login_alone_open' => '开启QQ独立登录',
+	'security_qq_login_alone_open_comment' => '有效防止盗号！开启后只能使用QQ号登录，即便盗取了论坛帐号也无法登录发帖',
 
 	'search_menu_setting' => '设置',
 	'search_menu_service' => '功能配置',
 	'search_setting_allow_hot_topic' => '开启热门话题',
 	'search_setting_allow_forum_recommend' => '开启版块推荐词',
 	'search_setting_allow_thread_related' => '开启主题相关帖',
+	'search_setting_allow_thread_related_comment' => '展示在主题帖下方，根据帖子内容计算出站内相关的帖子，挖掘相似主题，拓展用户阅读深度。',
+	'search_setting_allow_recommend_related' => '开启相关推荐',
+	'search_setting_allow_recommend_related_comment' => '当用户通过搜索引擎点到站内帖子页时，会在页面左下角产生一个浮动的推荐页面，帮助访客发现更多站内相关内容。',
 	'search_setting_allow_forum_related' => '开启版块相关帖',
 	'search_setting_allow_collection_related' => '开启淘帖相关帖',
+	'search_menu_settingsearch' => '搜索设置',
+	'search_menu_basicsetting' => '基本设置',
+	'search_menu_modulesetting' => '模块设置',
+	'search_modulesetting_tips' => '纵横搜索提供的推荐服务，在不占用网站资源的前提下，通过云计算能力为网站用户提升访问深度。',
 );
 
 $GLOBALS['admincp_actions_normal'][] = 'cloud';

@@ -4,7 +4,7 @@
  *      [Discuz!] (C)2001-2099 Comsenz Inc.
  *      This is NOT a freeware, use is subject to license terms
  *
- *      $Id: config_global_default.php 32890 2013-03-20 10:42:31Z zhengqingpeng $
+ *      $Id: config_global_default.php 33337 2013-05-29 02:23:47Z andyzheng $
  */
 
 $_config = array();
@@ -95,6 +95,7 @@ $_config['memory']['redis']['server'] = '';
 $_config['memory']['redis']['port'] = 6379;
 $_config['memory']['redis']['pconnect'] = 1;
 $_config['memory']['redis']['timeout'] = 0;
+$_config['memory']['redis']['requirepass'] = '';
 /**
  * 是否使用 Redis::SERIALIZER_IGBINARY选项,需要igbinary支持,windows下测试时请关闭，否则会出>现错误Reading from client: Connection reset by peer
  * 支持以下选项，默认使用PHP的serializer

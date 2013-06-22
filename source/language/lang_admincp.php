@@ -4,7 +4,7 @@
  *      [Discuz!] (C)2001-2099 Comsenz Inc.
  *      This is NOT a freeware, use is subject to license terms
  *
- *      $Id: lang_admincp.php 33296 2013-05-22 08:41:49Z kamichen $
+ *      $Id: lang_admincp.php 33440 2013-06-17 02:39:05Z nemohou $
  */
 
 if(!defined('IN_DISCUZ')) {
@@ -958,6 +958,7 @@ $lang = array
 	'setting_styles_index_forumallowside' => '显示边栏',
 	'setting_styles_index_forumallowside_comment' => '选择“是”论坛首页侧边将显示聚合论坛内容的信息',
 	'setting_styles_index_whosonline' => '显示在线用户',
+	'setting_styles_index_display_none' => '不显示',
 	'setting_styles_index_whosonline_comment' => '设置是否在论坛首页底部和论坛版块边栏显示在线会员列表',
 	'setting_styles_index_whosonline_contract' => '缩略显示在线列表',
 	'setting_styles_index_whosonline_contract_comment' => '如果打开该选项，在线列表将只显示在线用户数，不显示详情，此时会员可手动打开在线用户列表(最大在线超过 500 人系统将自动缩略显示在线列表)',
@@ -1198,7 +1199,7 @@ $lang = array
 	'setting_home_base_sendmailday' => '邮件通知更新天数',
 	'setting_home_base_sendmailday_comment' => '(默认 0) 单位：天，当用户多少天没有登录站点的时候才会给其发送邮件通知；<br>设置为0，则不启用邮件通知功能；<br>启用本功能将会轻微增加服务器负载',
 	'setting_home_base_recycle_bin' => '开启日志回收站',
-	'setting_home_base_recycle_bin_comment' => '打开此功能后，所有被日志将被放在回收站中，而不会被直接删除',
+	'setting_home_base_recycle_bin_comment' => '打开此功能后，所有被删除日志将被放在回收站中，而不会被直接删除',
 
 	'setting_home_base_networkpage' => '成员排行榜允许分页浏览',
 	'setting_home_base_networkpage_comment' => '该设置只对排行榜中的竞价排行、在线成员、全部成员有效',

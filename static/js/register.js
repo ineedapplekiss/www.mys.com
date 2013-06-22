@@ -2,7 +2,7 @@
 	[Discuz!] (C)2001-2099 Comsenz Inc.
 	This is NOT a freeware, use is subject to license terms
 
-	$Id: register.js 33191 2013-05-06 06:49:34Z nemohou $
+	$Id: register.js 33432 2013-06-13 07:36:18Z nemohou $
 */
 
 var lastusername = '', lastpassword = '', lastemail = '', lastinvitecode = '', stmp = new Array(), modifypwd = false, profileTips = '如不需要更改密码，此处请留空';
@@ -77,7 +77,7 @@ function checkPwdComplexity(firstObj, secondObj, modify) {
 			}
 			errormessage(firstObj.id, pwmsg);
 		}else{
-			errormessage(firstObj.id, !modifypwd ? 'succeed' : profileTips);
+			errormessage(firstObj.id, !modifypwd ? 'succeed' : '');
 		}
 		checkpassword(firstObj.id, secondObj.id);
 	};
@@ -333,7 +333,7 @@ function checkpassword(id1, id2) {
 	if($(id1).value != $(id2).value) {
 		errormessage(id2, '两次输入的密码不一致');
 	} else {
-		errormessage(id2, !modifypwd ? 'succeed' : profileTips);
+		errormessage(id2, !modifypwd ? 'succeed' : '');
 	}
 }
 

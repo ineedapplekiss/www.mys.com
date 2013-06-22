@@ -4,7 +4,7 @@
  *      [Discuz!] (C)2001-2099 Comsenz Inc.
  *      This is NOT a freeware, use is subject to license terms
  *
- *      $Id: post_newthread.php 32970 2013-03-29 02:26:09Z monkey $
+ *      $Id: post_newthread.php 33374 2013-06-03 08:40:01Z nemohou $
  */
 
 if(!defined('IN_DISCUZ')) {
@@ -270,6 +270,7 @@ if(!submitcheck('topicsubmit', 0, $seccodecheck, $secqaacheck)) {
 
 	$return = $modthread->newthread($params);
 	$tid = $modthread->tid;
+	$pid = $modthread->pid;
 
 
 
