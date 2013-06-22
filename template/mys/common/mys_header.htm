@@ -6,83 +6,9 @@
     <link href="<!--{$_G['style']['styleimgdir']}-->/css/style.css" rel="stylesheet" type="text/css" />
     <link href="<!--{$_G['style']['styleimgdir']}-->/css/header.css" rel="stylesheet" type="text/css" />
     <script src="<!--{$_G['style']['styleimgdir']}-->/js/jquery14.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        var t = n = 0, count;
-        $(document).ready(function () {
-            count = $("#banner_list a").length;
-            $("#banner_list a:not(:first-child)").hide();
-            $("#banner_info").html($("#banner_list a:first-child").find("img").attr('alt'));
-            $("#banner_info").click(function () { window.open($("#banner_list a:first-child").attr('href'), "_blank") });
-            $("#banner li").click(function () {
-                clearInterval(t);
-                var i = $(this).text() - 1; //获取Li元素内的值，即1，2，3，4
-                n = i;
-                if (i >= count) return;
-                $("#banner_info").html($("#banner_list a").eq(i).find("img").attr('alt'));
-                $("#banner_info").unbind().click(function () { window.open($("#banner_list a").eq(i).attr('href'), "_blank") })
-                $("#banner_list a").filter(":visible").fadeOut(500).parent().children().eq(i).fadeIn(1000);
-                $(this).css({ "background": "#26910E", 'color': '#fff' }).siblings().css({ "background": "#000", 'color': '#fff' });
 
-                t = setInterval("showAuto()", 4000);
-            });
-
-
-            t = setInterval("showAuto()", 4000);
-
-
-            //图片移过
-            var h, w;
-            $(".tpImg").hover(function () {
-                h = $(this).height();
-                w = $(this).width();
-                //判断IE6
-                if (($.browser.msie) && ($.browser.version == "6.0")) {
-                    return;
-                }
-                // hover in
-                $(this).attr("style", "z-index:2;");
-                $(this).removeClass("tp");
-                $(this).addClass("imgShadow");
-                //animateB($(this));
-            }, function () {
-                //判断IE6
-                if (($.browser.msie) && ($.browser.version == "6.0")) {
-                    return;
-                }
-                // hover out
-                $(this).attr("style", "z-index:0;");
-                $(this).removeClass("imgShadow");
-                $(this).addClass("tp");
-                //reversAnimationB($(this));
-            });
-
-
-            function animateB(obj) {
-                obj.stop().animate({
-                    height: obj.height() + 20,
-                    width: obj.width() + 20,
-                    left: "-=25",
-                    top: "-=25"
-                }, "3000");
-            }
-
-            //搜索框
-            $(".txtInput").click(function () {
-                $(this).select();
-            });
-            $(".txtInput").blur(function () {
-                if ($(this).val() == "") {
-                    $(this).val("关键词搜索...");
-                }
-            });
-
-        });
-        function showAuto() {
-            n = n >= (count - 1) ? 0 : ++n;
-            $("#banner li").eq(n).trigger('click');
-        }
-
-    </script>
+    <script type="text/javascript">var STYLEID = '{STYLEID}', STATICURL = '{STATICURL}', IMGDIR = '{IMGDIR}', VERHASH = '{VERHASH}', charset = '{CHARSET}', discuz_uid = '$_G[uid]', cookiepre = '{$_G[config][cookie][cookiepre]}', cookiedomain = '{$_G[config][cookie][cookiedomain]}', cookiepath = '{$_G[config][cookie][cookiepath]}', showusercard = '{$_G[setting][showusercard]}', attackevasive = '{$_G[config][security][attackevasive]}', disallowfloat = '{$_G[setting][disallowfloat]}', creditnotice = '<!--{if $_G['setting']['creditnotice']}-->$_G['setting']['creditnames']<!--{/if}-->', defaultstyle = '$_G[style][defaultextstyle]', REPORTURL = '$_G[currenturl_encode]', SITEURL = '$_G[siteurl]', JSPATH = '$_G[setting][jspath]', DYNAMICURL = '$_G[dynamicurl]';</script>
+    <script type="text/javascript" src="{$_G[setting][jspath]}common.js?{VERHASH}"></script>
 </head>
 <body>
     <div id="content">

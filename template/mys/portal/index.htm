@@ -423,34 +423,43 @@
                 </div>
             </div>
             <div id="lb">
-                <div id="banner">
-                    <div id="banner_bg">
-                    </div>
-                    <!--标题背景-->
-                    <div id="banner_info">
-                    </div>
-                    <!--标题-->
-                    <ul>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                        <li>5</li>
-                        <li>6</li>
-                        <li>7</li>
-                    </ul>
-                    <div id="banner_list">
-                        <a href="#" target="_blank">
-                            <img src="<!--{$_G['style']['styleimgdir']}-->/images/p1.jpg" title="" alt="" width="994" /></a> <a href="#" target="_blank">
-                                <img src="<!--{$_G['style']['styleimgdir']}-->/images/p2.jpg" title="" alt="" width="994" /></a> <a href="#" target="_blank">
-                                    <img src="<!--{$_G['style']['styleimgdir']}-->/images/p3.jpg" title="" alt="" width="994" /></a> <a href="#" target="_blank">
-                                        <img src="<!--{$_G['style']['styleimgdir']}-->/images/p4.jpg" title="" alt="" width="994" /></a> <a href="#" target="_blank">
-                                            <img src="<!--{$_G['style']['styleimgdir']}-->/images/p5.jpg" title="" alt="" width="994" /></a>
-                        <a href="#" target="_blank">
-                            <img src="<!--{$_G['style']['styleimgdir']}-->/images/p6.jpg" title="" alt="" width="994" /></a> <a href="#" target="_blank">
-                                <img src="<!--{$_G['style']['styleimgdir']}-->/images/p7.jpg" title="" alt="" width="994" /></a>
-                    </div>
-                </div>
+
+                    <style>
+                        /* 幻灯片 */
+                        .slideblock { position: relative; }
+                        	.slideshow { clear: both; }
+                        		.slideshow li { position: relative; overflow: hidden; }
+                        			.slideshow span.title { position: absolute; bottom: 0; left: 0; margin-bottom: 0; width: 100%; height: 32px; line-height: 32px; font-size: 14px; text-indent: 10px; }
+                        			.slideshow span.title, .slidebar li { background: rgba(0, 0, 0, 0.3); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr = #30000000, endColorstr = #30000000); color: {LIGHTLINK}; overflow: hidden; }
+                        			.slidebar li { float: left; margin-right: 1px; width: 20px; height: 20px; line-height: 20px; text-align: center; font-size: 10px; cursor: pointer; }
+                        				.slidebar li.on { background: rgba(255, 255, 255, 0.5); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr = #50FFFFFF, endColorstr = #50FFFFFF); color: #000; font-weight: 700; }
+
+
+                        element.style {
+                            display: block;
+                        }
+                        .cl:after {
+                            clear: both;
+                            content: ".";
+                            display: block;
+                            height: 0;
+                            visibility: hidden;
+                        }
+                        .slidebox, .block-name {
+                            display: none;
+                        }
+                        .cl {
+                        }
+                        * {
+                            word-wrap: break-word;
+                        }
+
+                        .slideshow {
+                            clear: both;
+                        }
+                    </style>
+                    <!--{block/244}-->
+
             </div>
             <div id="sp">
                 <div id="sp_d">
