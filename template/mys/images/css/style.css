@@ -1,4 +1,4 @@
-﻿/* CSS Document */
+/* CSS Document */
 a
 {
 	bencalie: e-xpression(this.onfocus=blur);
@@ -153,7 +153,6 @@ body
 	float: left;
 	margin-top: 9px;
 	text-align: left;
-	
 	_width:280px;
 }
 .znzz img
@@ -180,12 +179,9 @@ body
 .znzz a
 {
 	float: left;
-	width: 282px;
 	height: 14px;
 	font-family: "宋体";
 	color: #333;
-	
-	_width:250px;
 }
 .znx
 {

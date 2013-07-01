@@ -139,7 +139,7 @@ if($action == 'index') {
 		showmessage(lang('plugin/auction', 'm_no_perm'));
 	}
 }
-include template('auction:auction');
+include template('auction:mys/jflist');
 
 
 function updatetop() {
