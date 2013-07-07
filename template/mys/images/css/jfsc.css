@@ -159,7 +159,7 @@ li.dy{background:#990000;color:#FFF;}
 /*li:hover.dy{background:#fff;}*/
 li a.wz{width:25px; height:25x; color:#FFF;}
 /*li.dy a:hover.wz{ color:#990000;}*/
-.nr{ width:996px; height:745px; float:left; display:inline; margin-top:20px;}
+.nr{ width:996px; float:left; display:inline; margin-top:20px;}
 .dh{ float:left; margin-right:29px; width:220px; height:234px; margin-bottom:18px;}
 .dh img{ border:0px; float:left;}
 span.jh{width:220px;font-family:"宋体"; font-size:12px; color:#000; margin-top:16px; float:left;}

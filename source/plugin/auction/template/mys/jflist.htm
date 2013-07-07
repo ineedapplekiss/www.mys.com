@@ -1,34 +1,41 @@
 <!--{template common/mys_header}-->
 <link href="<!--{$_G['style']['styleimgdir']}-->/css/jfsc.css" rel="stylesheet" type="text/css" />
         <div id="lb">
-            <div id="banner">
-                <div id="banner_bg">
-                </div>
-                <!--标题背景-->
-                <div id="banner_info">
-                </div>
-                <!--标题-->
-                <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
-                    <li>7</li>
-                </ul>
-                <div id="banner_list">
-                    <a href="#" target="_blank">
-                        <img src="<!--{$_G['style']['styleimgdir']}-->/images/p1.jpg" title="" alt="" width="994" /></a> <a href="#" target="_blank">
-                            <img src="<!--{$_G['style']['styleimgdir']}-->/images/p2.jpg" title="" alt="" width="994" /></a> <a href="#" target="_blank">
-                                <img src="<!--{$_G['style']['styleimgdir']}-->/images/p3.jpg" title="" alt="" width="994" /></a> <a href="#" target="_blank">
-                                    <img src="<!--{$_G['style']['styleimgdir']}-->/images/p4.jpg" title="" alt="" width="994" /></a> <a href="#" target="_blank">
-                                        <img src="<!--{$_G['style']['styleimgdir']}-->/images/p5.jpg" title="" alt="" width="994" /></a>
-                    <a href="#" target="_blank">
-                        <img src="<!--{$_G['style']['styleimgdir']}-->/images/p6.jpg" title="" alt="" width="994" /></a> <a href="#" target="_blank">
-                            <img src="<!--{$_G['style']['styleimgdir']}-->/images/p7.jpg" title="" alt="" width="994" /></a>
-                </div>
-            </div>
+            <style>
+                /* 幻灯片 */
+                .slideblock { position: relative; }
+                	.slideshow { clear: both; }
+                		.slideshow li { position: relative; overflow: hidden; }
+                			.slideshow span.title { position: absolute; bottom: 0; left: 0; margin-bottom: 0; width: 100%; height: 32px; line-height: 32px; font-size: 14px; text-indent: 10px; }
+                			.slideshow span.title, .slidebar li { background: rgba(0, 0, 0, 0.3); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr = #30000000, endColorstr = #30000000); color: {LIGHTLINK}; overflow: hidden; }
+                			.slidebar li { float: left; margin-right: 1px; width: 20px; height: 20px; line-height: 20px; text-align: center; font-size: 10px; cursor: pointer; }
+                				.slidebar li.on { background: rgba(255, 255, 255, 0.5); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr = #50FFFFFF, endColorstr = #50FFFFFF); color: #000; font-weight: 700; }
+
+
+                element.style {
+                    display: block;
+                }
+                .cl:after {
+                    clear: both;
+                    content: ".";
+                    display: block;
+                    height: 0;
+                    visibility: hidden;
+                }
+                .slidebox, .block-name {
+                    display: none;
+                }
+                .cl {
+                }
+                * {
+                    word-wrap: break-word;
+                }
+
+                .slideshow {
+                    clear: both;
+                }
+            </style>
+            <!--{block/244}-->
         </div>
         <div id="ss">
             <img src="<!--{$_G['style']['styleimgdir']}-->/images/6_03.gif" width="44" height="40" />
@@ -51,153 +58,29 @@
                 当前可兑换</p>
             <div class="spx">
             </div>
-            <div class="ym" style="margin-bottom: 0px;">
-                <ul>
-                    <li class="dy"><a class="wz" href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">6</a></li>
-                    <li><a href="#">7</a></li>
-                </ul>
-            </div>
+            <!--{if $multi}--><div class="ym" style="padding:4px 0 4px ;margin-bottom: 0px;">$multi</div><!--{/if}-->
             <div class="xx">
             </div>
             <div class="nr">
+            	<!--{if $type1}-->
+				<!--{loop $type1 $auc}-->
                 <div class="dh">
-                    <a href="#">
-                        <img src="<!--{$_G['style']['styleimgdir']}-->/images/6_17.gif" width="219" height="137" /></a><a href="#"><span class="jh">梦幻龙族2激活码</span></a>
+                    <a href="forum.php?mod=viewthread&tid={$auc[tid]}" title="{$auc[name]}">
+                        <img src="{$auc[att]}" width="219" height="137" /></a><a href="forum.php?mod=viewthread&tid={$auc[tid]}" title="{$auc[name]}"><span class="jh">$auc['name']</span></a>
                     <p class="sz">
-                        500积分</p>
-                    <a href="#">
+                        {$auc['ext_price']} {$_G[setting][extcredits][$auc['extid']][title]}</p>
+                    <a href="forum.php?mod=viewthread&tid={$auc[tid]}" title="{$auc[name]}">
                         <img class="jf" src="<!--{$_G['style']['styleimgdir']}-->/images/6_21.gif" width="75" height="24" /></a>
                 </div>
-                <div class="dh">
-                    <a href="#">
-                        <img src="<!--{$_G['style']['styleimgdir']}-->/images/6_17.gif" width="219" height="137" /></a><a href="#"><span class="jh">梦幻龙族2激活码</span></a>
-                    <p class="sz">
-                        500积分</p>
-                    <a href="#">
-                        <img class="jf" src="<!--{$_G['style']['styleimgdir']}-->/images/6_21.gif" width="75" height="24" /></a>
-                </div>
-                <div class="dh">
-                    <a href="#">
-                        <img src="<!--{$_G['style']['styleimgdir']}-->/images/6_17.gif" width="219" height="137" /></a><a href="#"><span class="jh">梦幻龙族2激活码</span></a>
-                    <p class="sz">
-                        500积分</p>
-                    <a href="#">
-                        <img class="jf" src="<!--{$_G['style']['styleimgdir']}-->/images/6_21.gif" width="75" height="24" /></a>
-                </div>
-                <div class="dh">
-                    <a href="#">
-                        <img src="<!--{$_G['style']['styleimgdir']}-->/images/6_17.gif" width="219" height="137" /></a><a href="#"><span class="jh">梦幻龙族2激活码</span></a>
-                    <p class="sz">
-                        500积分</p>
-                    <a href="#">
-                        <img class="jf" src="<!--{$_G['style']['styleimgdir']}-->/images/6_21.gif" width="75" height="24" /></a>
-                </div>
-                <div class="dh">
-                    <a href="#">
-                        <img src="<!--{$_G['style']['styleimgdir']}-->/images/6_17.gif" width="219" height="137" /></a><a href="#"><span class="jh">梦幻龙族2激活码</span></a>
-                    <p class="sz">
-                        500积分</p>
-                    <a href="#">
-                        <img class="jf" src="<!--{$_G['style']['styleimgdir']}-->/images/6_21.gif" width="75" height="24" /></a>
-                </div>
-                <div class="dh">
-                    <a href="#">
-                        <img src="<!--{$_G['style']['styleimgdir']}-->/images/6_17.gif" width="219" height="137" /></a><a href="#"><span class="jh">梦幻龙族2激活码</span></a>
-                    <p class="sz">
-                        500积分</p>
-                    <a href="#">
-                        <img class="jf" src="<!--{$_G['style']['styleimgdir']}-->/images/6_21.gif" width="75" height="24" /></a>
-                </div>
-                <div class="dh">
-                    <a href="#">
-                        <img src="<!--{$_G['style']['styleimgdir']}-->/images/6_17.gif" width="219" height="137" /></a><a href="#"><span class="jh">梦幻龙族2激活码</span></a>
-                    <p class="sz">
-                        500积分</p>
-                    <a href="#">
-                        <img class="jf" src="<!--{$_G['style']['styleimgdir']}-->/images/6_21.gif" width="75" height="24" /></a>
-                </div>
-                <div class="dh">
-                    <a href="#">
-                        <img src="<!--{$_G['style']['styleimgdir']}-->/images/6_17.gif" width="219" height="137" /></a><a href="#"><span class="jh">梦幻龙族2激活码</span></a>
-                    <p class="sz">
-                        500积分</p>
-                    <a href="#">
-                        <img class="jf" src="<!--{$_G['style']['styleimgdir']}-->/images/6_21.gif" width="75" height="24" /></a>
-                </div>
-                <div class="dh">
-                    <a href="#">
-                        <img src="<!--{$_G['style']['styleimgdir']}-->/images/6_17.gif" width="219" height="137" /></a><a href="#"><span class="jh">梦幻龙族2激活码</span></a>
-                    <p class="sz">
-                        500积分</p>
-                    <a href="#">
-                        <img class="jf" src="<!--{$_G['style']['styleimgdir']}-->/images/6_21.gif" width="75" height="24" /></a>
-                </div>
-                <div class="dh">
-                    <a href="#">
-                        <img src="<!--{$_G['style']['styleimgdir']}-->/images/6_17.gif" width="219" height="137" /></a><a href="#"><span class="jh">梦幻龙族2激活码</span></a>
-                    <p class="sz">
-                        500积分</p>
-                    <a href="#">
-                        <img class="jf" src="<!--{$_G['style']['styleimgdir']}-->/images/6_21.gif" width="75" height="24" /></a>
-                </div>
+                <!--{/loop}-->
+				<!--{/if}-->
             </div>
             <div class="xx">
             </div>
-            <div class="ym">
-                <ul>
-                    <li class="dy"><a class="wz" href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">6</a></li>
-                    <li><a href="#">7</a></li>
-                </ul>
-            </div>
+            <!--{if $multi}--><div class="ym" style="padding:4px 0 4px ;margin-bottom: 0px;">$multi</div><!--{/if}-->
             <div class="spx">
             </div>
             <div class="kx">
             </div>
         </div>
-        <div id="footer">
-            <div id="friend">
-                <span>友情链接</span><div class="yq">
-                    <a href="#">
-                        <p>
-                            第一游戏网</p>
-                    </a><a href="#">
-                        <p>
-                            第一游戏网</p>
-                    </a>
-                </div>
-            </div>
-            <div id="jw">
-                <ul>
-                    <li><a href="#">关于萌元素</a></li>
-                    <li>|</li>
-                    <li><a href="#">联系我们</a></li>
-                    <li>|</li>
-                    <li><a href="#">城聘英才</a></li><li>|</li>
-                    <li><a href="#">营销中心</a></li><li>|</li>
-                    <li><a href="#">服务条款</a></li><li>|</li>
-                    <li><a href="#">网站地图</a></li><li>|</li>
-                    <li><a href="#">意见反馈</a></li><li>|</li>
-                    <li><a href="#">客服中心</a></li>
-                </ul>
-            </div>
-            <div id="ba">
-                <div>
-                    文网文[2010]271号&nbsp;&nbsp;&nbsp;&nbsp;京公网备1100000000005号&nbsp;&nbsp;&nbsp;&nbsp;ICP证号：京041489号</div>
-                <div>
-                    电子邮箱：wlwh@vip.sina.com &nbsp;&nbsp;&nbsp;&nbsp;文明办网文明上网举报电话：027-87109668（周一至周五9:00-18:00）&nbsp;&nbsp;&nbsp;&nbsp;
-                    举报邮箱：jubao@opi-corp.com</div>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+<!--{template common/mys_footer}-->

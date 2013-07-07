@@ -28,8 +28,9 @@ if($action == 'index') {
 
 	$typeid = intval($action);
 	$type1 = $type2 = array();
-	$type1 = getauctions('index', 8, false, "starttimeto>'$_G[timestamp]' AND status=0");
-	$type2 = getauctions('index', 4, false, "starttimeto<'$_G[timestamp]' OR status=1");
+	$type1 = getauctions('index', 12, true, "starttimeto>'$_G[timestamp]' AND status=0","plugin.php?id=auction");//最近热卖
+	$multi = replace_page_code($multi);
+	$type2 = getauctions('index', 4, false, "starttimeto<'$_G[timestamp]' OR status=1");//往期
 
 } elseif(in_array($action, array(1, 2))) {
 
@@ -40,7 +41,6 @@ if($action == 'index') {
 	if(!$_G['uid']) {
 		showmessage('to_login', '', array(), array('showmsg' => true, 'login' => 1));
 	}
-
 	$srchtxt = trim($_G['gp_sctxt']);
 	$sctype = in_array($_G['gp_sctype'], array(1,2,3)) ? $_G['gp_sctype'] : 0;
 	$sctime = in_array($_G['gp_sctime'], array(1,2,3)) ? $_G['gp_sctime'] : 0;
@@ -52,13 +52,13 @@ if($action == 'index') {
 	if($sctype) {
 		switch($sctype) {
 			case '1':
-				$sqladd = ($sqladd ? 'AND' : '')." typeid='1' AND extra='1'";
+				$sqladd .= ($sqladd ? 'AND' : '')." typeid='1' AND extra='1'";
 				break;
 			case '2':
-				$sqladd = ($sqladd ? 'AND' : '')." typeid='1' AND extra='0'";
+				$sqladd .= ($sqladd ? 'AND' : '')." typeid='1' AND extra='0'";
 				break;
 			case '3':
-				$sqladd = ($sqladd ? 'AND' : '')." typeid='2' AND extra='0'";
+				$sqladd .= ($sqladd ? 'AND' : '')." typeid='2' AND extra='0'";
 				break;
 		}
 	}
@@ -191,7 +191,7 @@ function getauctions($typeid, $limit, $pages = false, $sqladd = '', $url = '') {
 		$where = $sqladd ? "WHERE $sqladd" : '';
 	}
 
-	$typeid != 'index' && $count = DB::result_first("SELECT COUNT(*) FROM ".$table." $where");
+	$count = DB::result_first("SELECT COUNT(*) FROM ".$table." $where");
 	if($count || $typeid == 'index'){
 
 	
@@ -210,5 +210,17 @@ function getauctions($typeid, $limit, $pages = false, $sqladd = '', $url = '') {
 		}
 	}
 	return $data;
+}
+
+/**
+ * 替换翻页代码
+ */
+function replace_page_code($multi)
+{
+	$multi = substr_replace($multi,'<ul>',0,16);
+	$multi = substr_replace($multi,'</ul>',-6);
+	$multi = preg_replace("|<strong>(\d+)</strong>|","<li class='dy'><a class='wz' href='#'>$1</a></li>",$multi);
+	$multi = preg_replace("|<a href=\"([^\"]+)\">(\d+)<\/a>|mU","<li ><a href='$1'>$2</a></li>",$multi);
+	return $multi;
 }
 ?>
