@@ -6521,6 +6521,7 @@ $lang = array
 	'portalcategory_parentcategory_no_shownav' => '上级频道栏目没有设置为导航显示，请先设置上级频道',
 	'portalcategory_indextplname' => '频道空白模板(需 DIY 添加内容)',
 	'portalcategory_listtplname' => '文章列表模板',
+	'portalmys_listtplname' => '萌元素文章列表模板',
 	'portalcategory_viewtplname' => '文章内容模板',
 	'portalcategory_listoneranktplname' => '文章分类单列模板',
 	'portalcategory_listtworanktplname' => '文章分类两列模板',

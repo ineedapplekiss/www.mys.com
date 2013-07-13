@@ -1,0 +1,148 @@
+<!--{template common/mys_header}-->
+<style type="text/css" media="screen">
+.pgs {
+}
+.pgs #newspecial, .pgs #newspecialtmp, .pgs #post_reply, .pgs #post_replytmp {
+    float: left;
+    margin-right: 5px;
+}
+.pg {
+    float: right;
+}
+.pg, .pgb {
+    line-height: 26px;
+}
+.pg a, .pg strong, .pgb a, .pg label {
+    background-color: #FFFFFF;
+    background-repeat: no-repeat;
+    border: 1px solid #C2D5E3;
+    color: #333333;
+    display: inline;
+    float: left;
+    height: 26px;
+    margin-left: 4px;
+    overflow: hidden;
+    padding: 0 8px;
+    text-decoration: none;
+}
+.pg a.nxt, .pgb a {
+    padding: 0 10px;
+}
+.pg a:hover, .pgb a:hover {
+    border-color: #336699;
+    color: #336699;
+}
+.pg a.nxt {
+    background-image: url("../../static/image/common/arw_r.gif");
+    background-position: 90% 50%;
+    padding-right: 25px;
+}
+.pg a.prev {
+    background-image: url("../../static/image/common/arw_l.gif");
+    background-position: 50% 50%;
+}
+.pg strong {
+    background-color: #E5EDF2;
+}
+.pgb a {
+    background-image: url("../../static/image/common/arw_l.gif");
+    background-position: 10px 50%;
+    padding-left: 25px;
+}
+.pg label {
+    cursor: text;
+}
+.ie6 .pg label {
+    height: 23px;
+    padding-top: 3px;
+}
+.pg label .px {
+    height: 16px;
+    line-height: 16px;
+    padding: 0;
+    width: 25px;
+}
+#pgt .pg, #pgt .pgb {
+    margin-top: 5px;
+}
+
+.cl:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.bbda {
+    border-bottom: 1px dashed #CDCDCD;
+    margin-bottom:10px;
+}
+.xld dt {
+    font-weight: 700;
+    padding: 8px 0 5px;
+}
+
+.xld dd {
+    margin-bottom: 8px;
+}
+.xs2 {
+    font-size: 14px !important;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+a {
+    color: #336699;
+    text-decoration: none;
+}
+
+</style>
+<!--[name]{lang portalmys_listtplname}[/name]-->
+<!--{eval $list = array();}-->
+<!--{eval $wheresql = category_get_wheresql($cat);}-->
+<!--{eval $list = category_get_list($cat, $wheresql, $page);}-->
+
+
+<!--{ad/text/wp a_t}-->
+
+
+<div id="ct" class="ct2 wp cl">
+	<div class="mn">
+		<!--{ad/articlelist/mbm hm/1}--><!--{ad/articlelist/mbm hm/2}-->
+		<div class="bm">
+			<div class="bm_c xld">
+			<!--{loop $list['list'] $value}-->
+				<!--{eval $highlight = article_title_style($value);}-->
+				<!--{eval $article_url = fetch_article_url($value);}-->
+				<dl class="bbda cl">
+					<dt class="xs2"><a href="$article_url" target="_blank" class="xi2" $highlight>$value[title]</a> <!--{if $value[status] == 1}-->({lang moderate_need})<!--{/if}--></dt>
+					<dd class="xs2 cl">
+						<!--{if $value[pic]}--><div class="atc"><a href="$article_url" target="_blank"><img src="$value[pic]" alt="$value[title]" class="tn" /></a></div><!--{/if}-->
+						$value[summary]
+					</dd>
+					<dd>
+						<span class="xg1"> $value[dateline]</span>
+						<!--{if $_G['group']['allowmanagearticle'] || ($_G['group']['allowpostarticle'] && $value['uid'] == $_G['uid'] && (empty($_G['group']['allowpostarticlemod']) || $_G['group']['allowpostarticlemod'] && $value['status'] == 1)) || $categoryperm[$value['catid']]['allowmanage']}-->
+						<span class="xg1">
+							<span class="pipe">|</span>
+							<label><a href="portal.php?mod=portalcp&ac=article&op=edit&aid=$value[aid]">{lang edit}</a></label>
+							<span class="pipe">|</span>
+							<label><a href="portal.php?mod=portalcp&ac=article&op=delete&aid=$value[aid]" id="article_delete_$value[aid]" onclick="showWindow(this.id, this.href, 'get', 0);">{lang delete}</a></label>
+						</span>
+						<!--{/if}-->
+					</dd>
+				</dl>
+			<!--{/loop}-->
+			</div>
+			<!--[diy=listloopbottom]--><div id="listloopbottom" class="area"></div><!--[/diy]-->
+		</div>
+		<!--{ad/articlelist/mbm hm/3}--><!--{ad/articlelist/mbm hm/4}-->
+		<!--{if $list['multi']}--><div class="pgs cl">{$list['multi']}</div><!--{/if}-->
+
+
+	</div>
+
+</div>
+
+
+
+<!--{template common/mys_footer}-->

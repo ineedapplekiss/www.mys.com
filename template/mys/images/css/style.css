@@ -3,6 +3,7 @@ a
 {
 	bencalie: e-xpression(this.onfocus=blur);
 	text-decoration:none;
+	outline: none;
 }
 .imgShadow
 {
@@ -66,7 +67,6 @@ body
 	margin-left: 609px;
 	margin-top: 14px;
 	font-weight:bold;
-	
 	_margin-left:439px;
 }
 
@@ -519,6 +519,7 @@ body
 #jf_d a
 {
 	font-family: "宋体";
+	color: #000;
 	font-style: normal;
 	text-decoration: none;
 }

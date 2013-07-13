@@ -1,4 +1,4 @@
-﻿a
+a
 {
 	text-decoration:none;	
 }
@@ -111,7 +111,7 @@ ul li
 	height: 33px;
 	position: absolute;
 	right: 0;
-	top: 38px;
+	top: 48px;
 	width: 310px;
 	text-align: right;
 }
@@ -151,7 +151,7 @@ ul li
 	margin-top: 0px;
 	color: #999;
 	position: absolute;
-	top: 43px;
+	top: 63px;
 	margin-right: 340px;
 	width: 350px;
 	line-height: 25px;
@@ -191,6 +191,11 @@ ul li
 	padding-top: 2px;
 	_margin-right: 10px;
 	_float: right;
+	width:636px;
+}
+.hzSpan
+{
+	margin-right:10px;
 }
 .hz .hzSpan a
 {
@@ -223,6 +228,22 @@ ul li
 	font-size: 12px;
 	margin-left: 30px;
 	margin-top: 4px;
+}
+.hz span form
+{
+	margin-top: -4px;
+}
+.pn {
+    background: url("../../../../static/image/common/pn.png") repeat-x scroll 0 0 #E5E5E5;
+    border: 1px solid #999999;
+    box-shadow: 0 1px 0 #E5E5E5;
+    cursor: pointer;
+    height: 23px;
+    margin-right: 3px;
+    overflow: hidden;
+    padding: 0;
+    vertical-align: middle;
+    font-family: "微软雅黑";
 }
 
 

@@ -5,10 +5,51 @@
     <title>萌元素游戏网</title>
     <link href="<!--{$_G['style']['styleimgdir']}-->/css/style.css" rel="stylesheet" type="text/css" />
     <link href="<!--{$_G['style']['styleimgdir']}-->/css/header.css" rel="stylesheet" type="text/css" />
-    <script src="<!--{$_G['style']['styleimgdir']}-->/js/jquery14.js" type="text/javascript"></script>
 
     <script type="text/javascript">var STYLEID = '{STYLEID}', STATICURL = '{STATICURL}', IMGDIR = '{IMGDIR}', VERHASH = '{VERHASH}', charset = '{CHARSET}', discuz_uid = '$_G[uid]', cookiepre = '{$_G[config][cookie][cookiepre]}', cookiedomain = '{$_G[config][cookie][cookiedomain]}', cookiepath = '{$_G[config][cookie][cookiepath]}', showusercard = '{$_G[setting][showusercard]}', attackevasive = '{$_G[config][security][attackevasive]}', disallowfloat = '{$_G[setting][disallowfloat]}', creditnotice = '<!--{if $_G['setting']['creditnotice']}-->$_G['setting']['creditnames']<!--{/if}-->', defaultstyle = '$_G[style][defaultextstyle]', REPORTURL = '$_G[currenturl_encode]', SITEURL = '$_G[siteurl]', JSPATH = '$_G[setting][jspath]', DYNAMICURL = '$_G[dynamicurl]';</script>
     <script type="text/javascript" src="{$_G[setting][jspath]}common.js?{VERHASH}"></script>
+    <script src="<!--{$_G['style']['styleimgdir']}-->/js/jquery14.js"></script>
+    <script type="text/javascript" charset="utf-8">
+    	var jq = jQuery.noConflict(); 
+    	jq(document).ready(function () {
+		    //图片移过
+		    var h, w;
+		    jq(".tpImg").hover(function () {
+		        h = jq(this).height();
+		        w = jq(this).width();
+		        //判断IE6
+		        if ((jq.browser.msie) && (jq.browser.version == "6.0")) {
+		            return;
+		        }
+		        // hover in
+		        jq(this).attr("style", "z-index:2;");
+		        jq(this).removeClass("tp");
+		        jq(this).addClass("imgShadow");
+		    }, function () {
+		        //判断IE6
+		        if ((jq.browser.msie) && (jq.browser.version == "6.0")) {
+		            return;
+		        }
+		        // hover out
+		        jq(this).attr("style", "z-index:0;");
+		        jq(this).removeClass("imgShadow");
+		        jq(this).addClass("tp");
+		    });
+
+
+		    //搜索框
+		    jq(".txtInput").click(function () {
+		        jq(this).select();
+		    });
+		    jq(".txtInput").blur(function () {
+		        if (jq(this).val() == "") {
+		            jq(this).val("关键词搜索...");
+		        }
+		    });
+
+		});
+    </script>
+   
 </head>
 <body>
     <div id="content">
@@ -56,7 +97,7 @@
             <div class="hd2">
                 <div class="hz">
                     <!--{template common/mys_userstatus}-->
-                    <span class="hzSpan">[&nbsp;<a href="portal.php">萌元素首页</a>&nbsp;-&nbsp;<a href="forum.php">萌元素手游论坛</a>&nbsp;-&nbsp;<a
+                    <span class="hzSpan" style="float:right;">[&nbsp;<a href="portal.php">萌元素首页</a>&nbsp;-&nbsp;<a href="forum.php">萌元素手游论坛</a>&nbsp;-&nbsp;<a
                         href="plugin.php?id=auction">积分商城</a>&nbsp;]</span></div>
             </div>
         </div>

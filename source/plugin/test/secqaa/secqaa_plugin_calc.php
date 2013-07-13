@@ -12,8 +12,8 @@ if(!defined('IN_DISCUZ')) {
 }
 
 /*
- * ´æ·ÅÔÚ²å¼şÄ¿Â¼µÄÑéÖ¤ÎÊ´ğÀà
- * ÎÄµµ: http://open.discuz.net/?ac=document&page=plugin_classes#.E9.AA.8C.E8.AF.81.E9.97.AE.E7.AD.94.E7.B1.BB
+ * å­˜æ”¾åœ¨æ’ä»¶ç›®å½•çš„éªŒè¯é—®ç­”ç±»
+ * æ–‡æ¡£: http://open.discuz.net/?ac=document&page=plugin_classes#.E9.AA.8C.E8.AF.81.E9.97.AE.E7.AD.94.E7.B1.BB
  */
 class secqaa_plugin_calc {
 
