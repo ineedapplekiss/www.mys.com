@@ -1,8 +1,8 @@
 <?php
-define('UC_DBHOST', '117.121.25.221');
-define('UC_DBUSER', 'szl');
-define('UC_DBPW', 'szl');
-define('UC_DBNAME', 'www_mys_com');
+define('UC_DBHOST', $_SERVER['DB_HOST']);
+define('UC_DBUSER', $_SERVER['DB_USER']);
+define('UC_DBPW', $_SERVER['DB_PASS']);
+define('UC_DBNAME', $_SERVER['DB_NAME']);
 define('UC_DBCHARSET', 'utf8');
 define('UC_DBTABLEPRE', 'mys_ucenter_');
 define('UC_COOKIEPATH', '/');

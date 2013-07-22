@@ -6,7 +6,6 @@
  *
  *      $Id: index.php 33454 2013-06-19 03:08:34Z jeffjzhang $
  */
-
 if(!empty($_SERVER['QUERY_STRING']) && is_numeric($_SERVER['QUERY_STRING'])) {
 	$_ENV['curapp'] = 'home';
 	$_GET = array('mod'=>'space', 'uid'=>$_SERVER['QUERY_STRING']);

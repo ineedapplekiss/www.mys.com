@@ -4,12 +4,12 @@
 $_config = array();
 
 // ----------------------------  CONFIG DB  ----------------------------- //
-$_config['db']['1']['dbhost'] = '117.121.25.221';
-$_config['db']['1']['dbuser'] = 'szl';
-$_config['db']['1']['dbpw'] = 'szl';
+$_config['db']['1']['dbhost'] = $_SERVER['DB_HOST'];
+$_config['db']['1']['dbuser'] = $_SERVER['DB_USER'];
+$_config['db']['1']['dbpw'] = $_SERVER['DB_PASS'];
 $_config['db']['1']['dbcharset'] = 'utf8';
 $_config['db']['1']['pconnect'] = '0';
-$_config['db']['1']['dbname'] = 'www_mys_com';
+$_config['db']['1']['dbname'] = $_SERVER['DB_NAME'];
 $_config['db']['1']['tablepre'] = 'mys_';
 $_config['db']['slave'] = '';
 $_config['db']['common']['slave_except_table'] = '';
