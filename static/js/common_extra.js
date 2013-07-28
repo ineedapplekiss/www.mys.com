@@ -686,8 +686,8 @@ function slideshow(el) {
 			this.slidebar = document.createElement('div');
 			this.slidebar.className = 'slidebar';
 			this.slidebar.style.position = 'absolute';
-			this.slidebar.style.top = '5px';
-			this.slidebar.style.left = '4px';
+			this.slidebar.style.bottom = '10px';
+			this.slidebar.style.right = '14px';
 			this.slidebar.style.display = 'none';
 			var html = '<ul>';
 			for(var i=0; i<this.length; i++) {
