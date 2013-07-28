@@ -13,8 +13,7 @@ define('UC_DBCONNECT', 0);
 
 define('UC_CHARSET', 'utf-8');
 define('UC_KEY', 'q8t8v6D8p6sbzcA3vd0be8T1ua75U8kcdds7g1z9977296Laba97ybC23bvfp5Sb');
-define('UC_API', 'http://www.mys.com/uc_server');
+define('UC_API', 'http://www.msoyo.com/uc_server');
 define('UC_APPID', '1');
 define('UC_IP', '');
 define('UC_PPP', 20);
-?>

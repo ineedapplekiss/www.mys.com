@@ -5,18 +5,17 @@ $_CACHE['apps'] = array (
     'appid' => '1',
     'type' => 'DISCUZX',
     'name' => 'Discuz! Board',
-    'url' => 'http://www.mys.com',
+    'url' => 'http://www.msoyo.com',
     'ip' => '',
     'viewprourl' => '',
     'apifilename' => 'uc.php',
     'charset' => '',
-    'dbcharset' => '',
     'synlogin' => '1',
+    'extra' => 
+    array (
+      'apppath' => '',
+      'extraurl' => '			',
+    ),
     'recvnote' => '1',
-    'extra' => false,
-    'tagtemplates' => '',
-    'allowips' => '',
   ),
 );
-
-?>

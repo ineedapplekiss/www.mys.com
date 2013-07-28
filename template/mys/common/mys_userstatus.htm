@@ -1,6 +1,7 @@
 <!--{if $_G['uid']}-->
     <span>欢迎您，<a href="home.php?mod=space&uid=$_G[uid]">{$_G[member][username]}</a> | <a href="member.php?mod=logging&action=logout&formhash={FORMHASH}">{lang logout}</a>，萌元素{lang credits}：$_G[member][credits]（<a href="#">领取</a>）</span>
 <!--{else}-->
+	<div id="append_parent"></div><div id="ajaxwaitid"></div>
     <span style='width:300px;'>
 
     <!--{if CURMODULE != 'logging'}-->

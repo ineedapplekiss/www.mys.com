@@ -125,6 +125,15 @@ make_html('portal.php?mod=view&aid={$aid}', $('makehtml_'));
 			<script type="text/javascript" src="{$_G[setting][jspath]}calendar.js?{VERHASH}"></script>
 			<form method="post" autocomplete="off" id="articleform" action="portal.php?mod=portalcp&ac=article{if $_GET[modarticlekey]}&modarticlekey=$_GET[modarticlekey]{/if}" enctype="multipart/form-data">
 				<!--{hook/portalcp_top}-->
+				<!--{if in_array($_GET['catid'],array(14,15,16,17))}-->
+					<div class="exfm pns cl">
+						发布热门游戏文章说明：<br>
+						1.文章来源：填写itunes下载地址<br>
+						2.来源地址：填写二维码下载地址<br>
+						3.文章摘要：填写游戏介绍<br>
+						4.游戏摘要：填写“资费”、"版本"、"开发商"之类的摘要信息<br>
+					</div>
+				<!--{/if}-->
 				<div class="dopt cl">
 					<span class="z mtn">{lang article_title}:&nbsp;</span>
 					<input type="text" name="title" id="title" class="px" value="$article[title]" size="80" />
@@ -212,7 +221,7 @@ make_html('portal.php?mod=view&aid={$aid}', $('makehtml_'));
 					</div>
 					<!--{hook/portalcp_extend}-->
 				</div>
-
+				
 				<div class="pbw">
 					<script type="text/javascript" language="javascript" src="{STATICURL}image/editor/editor_function.js?{VERHASH}"></script>
 					<!--{subtemplate home/editor_image_menu}-->
@@ -221,7 +230,16 @@ make_html('portal.php?mod=view&aid={$aid}', $('makehtml_'));
 				</div>
 
 				<!--{hook/portalcp_middle}-->
-
+				
+				<!--{if in_array($_GET['catid'],array(14,15,16,17))}-->
+				<div class="bm bml">
+					<div class="bm_h cl">
+						<h2>游戏摘要</h2>
+					</div>
+					<div class="bm_c"><textarea name="gameinfo" cols="80" class="pt" style="width: 98.7%; height: 51px;">$article[gameinfo]</textarea></div>
+				</div>
+				<!--{/if}-->
+				
 				<div class="bm bml">
 					<div class="bm_h cl">
 						<h2>{lang article_description}</h2>

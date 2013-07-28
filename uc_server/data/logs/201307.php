@@ -1,0 +1,9 @@
+<?PHP exit;?>	UCenterAdministrator	127.0.0.1	1374989060	login	succeed
+<?PHP exit;?>	UCenterAdministrator	127.0.0.1	1374989101	app_edit	appid=1
+<?PHP exit;?>	UCenterAdministrator	127.0.0.1	1374989137	app_edit	appid=1
+<?PHP exit;?>	UCenterAdministrator	127.0.0.1	1374989265	app_edit	appid=1
+<?PHP exit;?>	UCenterAdministrator	127.0.0.1	1374989424	login	succeed
+<?PHP exit;?>	UCenterAdministrator	127.0.0.1	1374990264	app_edit	appid=1
+<?PHP exit;?>	UCenterAdministrator	127.0.0.1	1374990967	app_edit	appid=1
+<?PHP exit;?>	UCenterAdministrator	127.0.0.1	1374991276	app_edit	appid=1
+<?PHP exit;?>	UCenterAdministrator	127.0.0.1	1374993376	app_edit	appid=1

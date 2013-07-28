@@ -74,7 +74,7 @@ if($article['contents'] && $article['showinnernav']) {
 
 require_once libfile('function/blog');
 $content['content'] = blog_bbcode($content['content']);
-
+$article['gameinfo'] = str_replace("\n","<br>",$content['gameinfo']);
 if(!empty($_G['setting']['makehtml']['flag']) && $article['htmlmade']) {
 	$_caturl = $_G['cache']['portalcategory'][$cat['topid']]['domain'] ? $_G['cache']['portalcategory'][$cat['topid']]['caturl'] : '';
 	$viewurl = $_caturl.$article['htmldir'].$article['htmlname'].'{page}.'.$_G['setting']['makehtml']['extendname'];

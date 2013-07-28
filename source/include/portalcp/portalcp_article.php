@@ -69,6 +69,7 @@ if(submitcheck("articlesubmit", 0, $seccodecheck, $secqaacheck)) {
 	$_GET['from'] = dhtmlspecialchars($_GET['from']);
 	$_GET['fromurl'] = str_replace('&amp;', '&', dhtmlspecialchars($_GET['fromurl']));
 	$_GET['dateline'] = !empty($_GET['dateline']) ? strtotime($_GET['dateline']) : TIMESTAMP;
+	$_GET['gameinfo'] = dhtmlspecialchars($_GET['gameinfo']);
 	if(censormod($_POST['title']) || $_G['group']['allowpostarticlemod']) {
 		$article_status = 1;
 	} else {
@@ -193,13 +194,13 @@ if(submitcheck("articlesubmit", 0, $seccodecheck, $secqaacheck)) {
 	}
 
 	foreach($dbcontents as $key => $value) {
-		C::t('portal_article_content')->update($value['cid'], array('title' => $pagetitle[$key], 'content' => $contents[$key], 'pageorder' => $key+1));
+		C::t('portal_article_content')->update($value['cid'], array('title' => $pagetitle[$key], 'content' => $contents[$key], 'gameinfo'=>$_GET['gameinfo'], 'pageorder' => $key+1));
 		unset($pagetitle[$key], $contents[$key]);
 	}
 
 	if($cdbcount < $cpostcount) {
 		foreach($contents as $key => $value) {
-			C::t('portal_article_content')->insert(array('aid' => $aid, 'id' => $setarr['id'], 'idtype' => $setarr['idtype'], 'title' => $pagetitle[$key], 'content' => $contents[$key], 'pageorder' => $key+1, 'dateline' => TIMESTAMP));
+			C::t('portal_article_content')->insert(array('aid' => $aid, 'id' => $setarr['id'], 'idtype' => $setarr['idtype'], 'title' => $pagetitle[$key], 'content' => $contents[$key], 'gameinfo'=>$_GET['gameinfo'], 'pageorder' => $key+1, 'dateline' => TIMESTAMP));
 		}
 		$pagecount = $cpostcount;
 	}
@@ -313,7 +314,7 @@ if(submitcheck("articlesubmit", 0, $seccodecheck, $secqaacheck)) {
 	foreach($posts as $post) {
 		$summary = portalcp_get_postmessage($post);
 		$summary .= lang('portalcp', 'article_pushplus_info', array('author'=>$post['author'], 'url'=>'forum.php?mod=redirect&goto=findpost&ptid='.$post['tid'].'&pid='.$post['pid']));
-		$inserts[] = array('aid'=>$aid, 'content'=>$summary, 'pageorder'=>$pageorder, 'dateline'=>$_G['timestamp'], 'id'=>$post[pid], 'idtype' =>'pid');
+		$inserts[] = array('aid'=>$aid, 'content'=>$summary, 'gameinfo'=>$_GET['gameinfo'], 'pageorder'=>$pageorder, 'dateline'=>$_G['timestamp'], 'id'=>$post[pid], 'idtype' =>'pid');
 		$pageorder++;
 	}
 	C::t('portal_article_content')->insert_batch($inserts);
@@ -502,7 +503,6 @@ if($op == 'delete') {
 	$from_cookie = array_filter($from_cookie);
 
 	if($article) {
-
 		foreach(C::t('portal_article_content')->fetch_all($aid) as $key => $value) {
 			$nextpage = '';
 			if($key > 0) {
@@ -512,6 +512,7 @@ if($op == 'delete') {
 				$article_content['title'] = $value['title'];
 			}
 			$article_content['content'] .= $nextpage.$value['content'];
+			$article['gameinfo'] = $value['gameinfo'];
 		}
 
 		$article['attach_image'] = $article['attach_file'] = '';
