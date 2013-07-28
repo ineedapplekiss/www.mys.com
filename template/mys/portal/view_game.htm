@@ -72,6 +72,15 @@
     min-width: 60px;
     padding: 4px;
 }
+.con {
+	color: #546869;
+    display: inline;
+    float: left;
+    font: 200 14px/20px "微软雅黑";
+    margin-left: 2px;
+    margin-right: 22px;
+    text-align: left;
+}
 </style>
 <!--[name]mys_detail_game_view[/name]-->
 <link href="<!--{$_G['style']['styleimgdir']}-->/css/main.css" rel="stylesheet" type="text/css" />
@@ -144,9 +153,11 @@
                             游戏截图</p>
                         <div class="spx">
                         </div>
-                        <div class="zt">
-                            $content[content]
-                        </div>
+                    </div>
+                    
+                    <div class="zt con">
+                        $content[content]
+                        <div style="clear:both"></div>
                     </div>
                 </div>
             </div>
